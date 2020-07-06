@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta chatset="utf-8" />
+        <title>
+        {% block titulo %} Inicio {% endblock %}
+        Symfony
+        </title>
+    </head>
+    <body>
+        <div id="header">
+            {% block cabecera %}
+                <h1>Cabecera de la plantilla</h1>
+            {% endblock %}
+            <hr>
+        </div>
+        <section id="content">
+            {% block contenido %}
+                <p>Contenido</p>
+            {% endblock %}
+                    <hr>
+        </section>
+
+        <footer>
+            <p>pie</p>
+        </footer>
+    </body>
+</html>
