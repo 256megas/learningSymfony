@@ -7,7 +7,42 @@
     <h1>Animales </h1>
 {% endblock %}
 {% block contenido %}
+   {#
     <h1>{{ title }}</h1>
     <h2>{{ nombre }}</h2>
     <h3>{{ apellidos }}</h3>
+    #}
+    
+    {# Crear variables en twig  #}
+    {% set perro='Pastor aleman' %}
+    {{ perro }}
+
+    {# Trabajar con arrays #}
+    {{ dump(animales) }}
+    {{ animales[1] }}
+
+    {# Trabajar con arrays asociativos #}
+    {{ dump(aves) }}
+    {{ aves.tipo ~ '-' ~ aves.raza }}
+
+    {# condicional #}
+    {% if aves.tipo=='palomo' %}
+        <h1>Cuidado un palomo volador</h1>
+    {% else %}
+        <h2>No hay palomos al la vista</h2>
+    {% endif %}
+
+    {# bucle #}
+    {% if animales|length >= 0 %}
+        <ul>
+            {% for animal in animales %}
+            <li>{{animal}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {# otro bucle for #}
+    {% for i in 0..10 %}
+        {{i}}<br/>
+    {% endfor %}
 {% endblock %}

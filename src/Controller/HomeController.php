@@ -21,10 +21,20 @@ class HomeController extends AbstractController
     public function animales($nombre, $apellidos)
     {
         $title = 'Bienvenido a la pagina de animales';
+        $animales = array('perro','gato', 'paloma', 'rata');
+        $pajaros = array(
+            'tipo'=>'palomo',
+            'color'=> 'gris',
+            'edad'=> 4, 
+            'raza'=> 'colillano'
+        );
+
         return $this->render('home/animales.html.twig', [
             'title' => $title,
             'nombre' => $nombre,
             'apellidos' => $apellidos,
+            'animales' => $animales,
+            'aves' => $pajaros,
         ]);
     }
 
