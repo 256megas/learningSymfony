@@ -45,4 +45,19 @@
     {% for i in 0..10 %}
         {{i}}<br/>
     {% endfor %}
+
+
+    {# otro bucle #}
+    {% if aves.color starts with 'g' %}
+        <h1>Empieza por G</h1>
+    {% endif %}
+    <hr/>
+    {{ include('partials/funciones.html.twig', {nombre: 'ALL'}) }}
+
+    <h1>Filtros</h1>
+    {{animales|length}}
+    {% set email='     email@email.com      ' %}
+    {{dump(email|trim|upper)}}
+
+    
 {% endblock %}

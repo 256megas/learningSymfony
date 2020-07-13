@@ -1,0 +1,16 @@
+ <h1>Funciones</h1>
+    {# Funciones predefinidas #}
+    {{ max([9,11,6,99,2]) }}
+    {{ min([9,11,6,99,2]) }}
+    {{ random([9,11,6,99,2]) }}
+
+    {% for i in range(0,100,5) %}
+        {{i}}<br/>
+    {% endfor %}
+
+    Mi nombre es {{ nombre }}
+
+    <h1>Extensiones personalizadas</h1>
+    
+    {{ multiplicar(2)|raw }}
+    {{ 12|multiplicar|raw }}
